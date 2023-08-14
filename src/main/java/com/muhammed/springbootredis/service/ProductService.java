@@ -11,4 +11,8 @@ public interface ProductService {
     List<Product> getAll() throws InterruptedException;
 
     void clearCache();
+
+    List<Product> getProducts() throws InterruptedException;
+
+    void clearCacheProducts();
 }
