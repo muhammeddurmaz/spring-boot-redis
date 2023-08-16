@@ -24,8 +24,10 @@ public class ProductResource {
     @GetMapping("/products")
     public ResponseEntity<List<Product>> getAllProduct() throws InterruptedException {
         if(sayac == 3){
-            productService.clearCache();
+            productService.clearCacheProducts();
+//            productService.clearCache();
             sayac = 0;
+//            return ResponseEntity.ok().body(productService.getProducts());
         }
         sayac++;
         return ResponseEntity.ok().body(productService.getAll());
